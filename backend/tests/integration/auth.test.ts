@@ -5,14 +5,18 @@ import { connectDB, disconnectDB } from '../../src/config/db.js';
 import { User } from '../../src/models/User.js';
 
 describe('Auth routes', () => {
+
+  // before test cases executed - connect to database  
   beforeAll(async () => {
     await connectDB();
   });
 
+  // after each test case - delete all users  
   afterEach(async () => {
     await User.deleteMany({});
   });
 
+  // after all test cases executed - disconnect database
   afterAll(async () => {
     await disconnectDB();
   });
