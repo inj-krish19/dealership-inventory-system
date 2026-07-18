@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      let res = await fetch(`${BACKEND_URL}/`, {
+      let res = await fetch(`${BACKEND_URL}`, {
         method: "GET",
         headers: {
           "content-type": "application/json"
@@ -21,7 +21,7 @@ function App() {
       });
 
       let response = await res.json();
-      setMessage(response?.message || "Failed to connect with backend");
+      setMessage(response?.description || "Failed to connect with backend");
 
     })();
   }, [])
@@ -35,7 +35,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1 className='text-red-400 font-bold text-2xl'>Get started</h1>
           <p>
             {message}
           </p>
