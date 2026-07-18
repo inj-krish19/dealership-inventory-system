@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import { env } from './env.js';
 
 export async function connectDB(): Promise<void> {
+  console.log("");
   try {
     await mongoose.connect(env.mongoUri);
     console.log(`[CONNECTION] MongoDB connected: ${mongoose.connection.host}`);

@@ -3,6 +3,7 @@ dotenv.config();
 
 // Env Config Interface for Handling Environment Variables
 interface EnvConfig {
+  domain: string;
   port: number;
   mongoUri: string;
   jwtSecret: string;
@@ -21,6 +22,7 @@ function getEnv(key: string, required = true): string {
 
 // Env Config global object for credentials
 export const env: EnvConfig = {
+  domain: getEnv('DOMAIN', false) || "http://localhost",
   port: Number(getEnv('PORT', false)) || 5000,
   mongoUri: getEnv('MONGO_URI'),
   jwtSecret: getEnv('JWT_SECRET'),

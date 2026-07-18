@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
 
-  const BACKEND_URL = import.meta.env?.BACKEND_URL || "http://localhost:3000";
+  const BACKEND_URL = import.meta.env?.VITE_BACKEND_URL || "http://localhost:3000";
 
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState("Frontend is working well");
