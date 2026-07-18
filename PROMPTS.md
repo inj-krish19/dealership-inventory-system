@@ -69,3 +69,29 @@ Resolve these issues.
 ```
 We are in trouble testing is getting failed. Now tell me how to do testing, tell me versioning command as it might have clash. Give me test related files back, also apart from this for checking the routes are working define "/" route for main endpoint where it describes about application, also create one "/health" route for health monitoring of the server. Also solve these testing + jest one issues.
 ```
+
+<br/>
+
+### PROMPT 5 - DEFININING ENDPOINTS, CONTROLLER, SERVICES, REPOSITORIES
+
+```
+Lets start creating endpoints. Authorization, role based access and all of that. Also like above give me the commits also.
+
+git commit -m "<feat/def/build/...>: <what we have made>
+
+<Used an AI assistant to generate the initial boilerplate for the
+controller and service, then manually added validation logic. >
+
+Co-authored-by: Claude <claude@users.noreply.github.com>"
+
+
+They respect modularity + clean code + SOLID moe so write according to that and give me commits to push one by one.
+```
+
+<br />
+
+### PROMPT 6 - ENHANCE CODE & COMMIT MESSAGE ORDER
+
+```
+I got it you gave commits now from next time and this time also give me like how much code to push and what commit instead of code code code + commit commit commit way. Give me in code code + commit, code code + commit on way. or mention like ex. {A1-A3} commit 1, then {A4-A5} commit 2. Which one looks effective
+```
