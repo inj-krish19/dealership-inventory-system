@@ -61,3 +61,11 @@ const token: string | undefined
 
 Resolve these issues.
 ```
+
+<br />
+
+### PROMPT 4 - TESTING FAILS & '/', '/health' Endpoints
+
+```
+We are in trouble testing is getting failed. Now tell me how to do testing, tell me versioning command as it might have clash. Give me test related files back, also apart from this for checking the routes are working define "/" route for main endpoint where it describes about application, also create one "/health" route for health monitoring of the server. Also solve these testing + jest one issues.
+```
