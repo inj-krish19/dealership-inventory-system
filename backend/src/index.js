@@ -22,4 +22,3 @@ app.listen(PORT, () => {
     console.log("\n\n");
 });
 export default app;
-//# sourceMappingURL=index.js.map
