@@ -95,3 +95,50 @@ They respect modularity + clean code + SOLID moe so write according to that and 
 ```
 I got it you gave commits now from next time and this time also give me like how much code to push and what commit instead of code code code + commit commit commit way. Give me in code code + commit, code code + commit on way. or mention like ex. {A1-A3} commit 1, then {A4-A5} commit 2. Which one looks effective
 ```
+
+<br/>
+
+### PROMPT 7 - FRONTEND LIBRARY SETUP
+
+```
+Lets go ahead whatever the next plan is lets do it. I have made the frontend tailwindcss configurations already so we dont have to do it. Other dependancies i am willing to add are react-icons for react related icons. For global state management lets add zustand, routing we 'll user react-router. So give me commands for installation then also now we start building frontend also. Not much more time remain now.
+```
+
+<br />
+
+### PROMPT 8 - COMMIT INSTRUCTIONS & FRONTEND TESTING
+
+```
+From next time keep it the commit thing in mind title and coauthor is correact, just dont forget to always give me for what ai is used for. Also you forgot that mentioning type during importing types. Can you regive me commits just else i have started these all it works. Beside this lets start the frontend testcases till what we have build.
+```
+
+<br />
+
+### PROMPT 9 - ROUTING & ENTRY POINT
+
+```
+Give me the App.tsx having all the routes and zustand management + provider all of that if needed.
+```
+
+<br />
+
+### PROMPT 10 - FIXING FOLDER STRUCTURE CLASH & TESTING STRUCTURURE
+
+```
+Currently you told me to add vitest.config.ts content also you told setup.ts in src/test folder where our old and local folder structure exist like below. Resolve the folder stucture clash issue and then approach solution to go.
+frontend/
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/               (Dashboard, Login, Register, AdminPanel)
+│   ├── services/             (api.ts — axios instance + endpoint calls)
+│   ├── types/                 (shared TS interfaces)
+│   ├── utils/
+│   └── App.tsx / main.tsx
+├── tests/
+├── package.json
+└── vite.config.ts
+```
+
+<br />
