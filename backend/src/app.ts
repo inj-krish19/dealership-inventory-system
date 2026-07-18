@@ -4,7 +4,12 @@ import { connectDB } from './config/db.js';
 import { env } from './config/env.js';
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: env.frontendUrl,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 connectDB().then(() => {

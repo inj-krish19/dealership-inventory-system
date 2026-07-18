@@ -30,4 +30,34 @@ After this all and solving all doubts if you are clear with every thing tiny det
 Just i wrapped creating folder structure for frontend and backend. Lets now move at backend side. As per the idea of application create a database schema and lets setup the Database MongoDB connection be sure you import the credential MONGO_URI from .env file. As its role based so handle as per it and we have to manage their both authentication through JWT authentication. So as per that. Give me these.
 ```
 
+_Follow Up: CORS Configuration_
+
+```
+In this app.ts configure cors where fetch frontend url from env.frontend or like that
+```
+
 <br/>
+
+### PROMPT 3 - RESOLVING ERRORS
+
+```
+Okay there are some of the errors, some of the code that is written with some bugs and poorly i am instructing it below.
+
+
+- First of all we are using "type": module, so imports are according to that
+
+- There in all imports .js postfix is needed, its throwing compilation errors. I have resolved it.
+
+- Integration Testing of db.test.ts is throwing error Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.ts(2593)
+
+- auth.ts has the error related verify token in string and undefined one issue. Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.ts(2345)
+
+const token: string | undefined
+
+- Vehicle model interface also has an issue that is Interface 'IVehicle' incorrectly extends interface 'Document<ObjectId, any, any, Record<string, any>, {}>'.
+  Types of property 'model' are incompatible.
+    Type 'string' is not assignable to type '{ <ModelType extends Model<unknown>>(name: string): ModelType; <ModelType extends Model<any, {}, {}, {}, any, any, any>>(): ModelType; }'.ts(2430).  
+
+Resolve these issues.
+```

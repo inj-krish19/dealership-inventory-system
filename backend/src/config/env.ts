@@ -5,6 +5,7 @@ dotenv.config();
 interface EnvConfig {
   domain: string;
   port: number;
+  frontendUrl: string;
   mongoUri: string;
   jwtSecret: string;
   jwtExpiresIn: string;
@@ -24,6 +25,7 @@ function getEnv(key: string, required = true): string {
 export const env: EnvConfig = {
   domain: getEnv('DOMAIN', false) || "http://localhost",
   port: Number(getEnv('PORT', false)) || 5000,
+  frontendUrl: process.env.FRONTEND_URL || "http://localhost:5173",
   mongoUri: getEnv('MONGO_URI'),
   jwtSecret: getEnv('JWT_SECRET'),
   jwtExpiresIn: getEnv('JWT_EXPIRES_IN', false) || '7d',
