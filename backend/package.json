@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Dealership Inventory System - Car Dealership Inventory System",
   "type": "module",
-  "main": "dist/app.js",
+  "main": "dist/server.js",
   "engines": {
     "node": ">=18.0.0"
   },
