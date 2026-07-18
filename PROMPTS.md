@@ -142,3 +142,53 @@ frontend/
 ```
 
 <br />
+
+### PROMPT 11 - TEST CASES FAILURE & RESOLVING FUNCTION AMBIUITY
+
+```
+These are the results of testcases we held, also i am facing some issue on compilation and runtime we have to fix them also.
+ ❯ tests/pages/Login.test.tsx (2 tests | 2 failed) 7ms
+     × logs in successfully and updates the store 4ms
+     × shows an error message on failed login 1ms
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/pages/Login.test.tsx > Login page > logs in successfully and updates the store
+
+TypeError: vi.mocked(...).mockResolvedValueOnce is not a function
+
+ ❯ tests/pages/Login.test.tsx:22:42
+     20|             token: 'fake-token',
+     21|         };
+     22|         vi.mocked(authService.loginUser).mockResolvedValueOnce(mockResponse);
+       |                                          ^
+     23|
+     24|         render(<MemoryRouter><Login /></MemoryRouter>);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/pages/Login.test.tsx > Login page > shows an error message on failed login
+TypeError: vi.mocked(...).mockRejectedValueOnce is not a function
+
+ ❯ tests/pages/Login.test.tsx:36:42
+
+     34|
+     35|     it('shows an error message on failed login', async () => {
+     36|         vi.mocked(authService.loginUser).mockRejectedValueOnce({
+       |                                          ^
+     37|             response: { data: { message: 'Invalid credentials' } },
+     38|         });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  2 failed | 8 passed (10)
+   Start at  23:44:29
+   Duration  3.49s (transform 268ms, setup 1.05s, import 1.33s, tests 129ms, environment 8.50s)
+
+Also apart from above one on compilation it gives this error for expect(screen.getByText('Admin Panel')).toBeInTheDocument();
+Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.
+
+```
+
+<br />
