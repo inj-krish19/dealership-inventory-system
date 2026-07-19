@@ -20,7 +20,7 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border px-6 py-4 flex justify-between items-center"
         >
-            <Link to="/dashboard" className="font-display text-xl font-semibold tracking-tight text-text">
+            <Link to="/" className="font-display text-xl font-semibold tracking-tight text-text">
                 Auto<span className="text-accent">Lot</span>
             </Link>
 

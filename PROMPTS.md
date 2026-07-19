@@ -227,3 +227,11 @@ Okay this one works. I can see your login page, how insane it looks appreciate y
 ```
 
 <br />
+
+### PROMPT - 14 : SAMPLE DATA & LANDING PAGE
+
+```
+Now currenly give me an .md file consisting sample data of the application and both of the collection. Give each of 2 records for user and admin. User [kglivee19@gmail.com, user@gmail.com]: Pass: Pass@123, Admin [krishshah19.in@gmail.com, admin@gmail.com]: Pass: ADM1N@5ECURE. Vehicles some 7-8 records, some of them with 0 quantity so can show out of stock and disable purchase button, different prices and others as per category, make, modelName. Apart from this now give me Home page of "/" route so always it dont redirect in dashboard or login page. This home page should be like that last one you can add some content reagding application, show some animation premium theme (like a home page and all descriing about application and all).
+```
+
+<br />

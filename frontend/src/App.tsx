@@ -2,29 +2,29 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './store/authStore';
 import { useThemeStore } from './store/themeStore';
-
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { AdminRoute } from './components/AdminRoute';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Navbar from './components/Navbar';
-import { ProtectedRoute } from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
-import { AdminRoute } from './components/AdminRoute';
-
+// import AdminPanel from './pages/AdminPanel';
+import Navbar from './components/Navbar';
 
 export default function App() {
   const hydrate = useAuthStore((s) => s.hydrate);
-
   const initTheme = useThemeStore((s) => s.initTheme);
-  useEffect(() => { initTheme(); }, [initTheme]);
 
   useEffect(() => {
     hydrate();
-  }, [hydrate]);
+    initTheme();
+  }, [hydrate, initTheme]);
 
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
@@ -36,8 +36,7 @@ export default function App() {
           </Route>
         </Route>
 
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
