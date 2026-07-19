@@ -12,6 +12,17 @@ development practices.
 
 **Live demo:** [dealership-inventory-system.vercel.app](https://dealership-inventory-system.vercel.app/)
 
+## Demo Credentials
+
+For quick evaluation without registering a new account, the live demo has these accounts pre-seeded:
+
+| Role  | Email           | Password     |
+| ----- | --------------- | ------------ |
+| User  | user@gmail.com  | Pass@123     |
+| Admin | admin@gmail.com | ADM1N@5ECURE |
+
+Log in as **User** to browse, search, and purchase vehicles. Log in as **Admin** to additionally see the Admin Panel link in the navbar, with access to add, edit, delete, and restock vehicles.
+
 ---
 
 ## Table of Contents
