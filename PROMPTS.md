@@ -269,3 +269,19 @@ Give me updated AdminPanel.tsx we still have the old classic file without theme 
 ```
 
 <br />
+
+### PROMPT - 19 : VEHICLE CARD TESTING COMPILATION ERROR
+
+```
+On VehicleCard.test.ts i have not pushed as it having error of this that are 'VehicleCard' refers to a value, but is being used as a type here. Did you mean 'typeof VehicleCard'?ts(2749)
+type VehicleCard = /*unresolved*/ any. So file is currently empty and not pushed on github. Also on each occurence of toBeInDocument and toBeDisabled it throws compilation error of Property  does not exist on type 'Assertion<HTMLElement>'
+```
+
+<br />
+
+### PROMPT - 20 : RESOLVING VEHICLE CARD TESTING
+
+```
+On VehicleCard.test.ts i have not pushed as it having error of this that are 'VehicleCard' refers to a value, but is being used as a type here. Did you mean 'typeof VehicleCard'?ts(2749)
+type VehicleCard = /*unresolved*/ any. So file is currently empty and not pushed on github. Also on each occurence of toBeInDocument and toBeDisabled it throws compilation error of Property  does not exist on type 'Assertion<HTMLElement>'
+```
