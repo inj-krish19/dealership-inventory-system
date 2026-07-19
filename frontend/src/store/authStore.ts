@@ -7,13 +7,24 @@ interface AuthState {
   isAuthenticated: boolean;
   login: (user: User, token: string) => void;
   logout: () => void;
-  hydrate: () => void;
+}
+
+function loadInitialState(): Pick<AuthState, 'user' | 'token' | 'isAuthenticated'> {
+  const token = localStorage.getItem('token');
+  const userStr = localStorage.getItem('user');
+
+  if (token && userStr) {
+    try {
+      return { user: JSON.parse(userStr), token, isAuthenticated: true };
+    } catch {
+      // corrupted localStorage — fall through to logged-out state
+    }
+  }
+  return { user: null, token: null, isAuthenticated: false };
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
-  user: null,
-  token: null,
-  isAuthenticated: false,
+  ...loadInitialState(),
 
   login: (user, token) => {
     localStorage.setItem('token', token);
@@ -25,13 +36,5 @@ export const useAuthStore = create<AuthState>((set) => ({
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     set({ user: null, token: null, isAuthenticated: false });
-  },
-
-  hydrate: () => {
-    const token = localStorage.getItem('token');
-    const userStr = localStorage.getItem('user');
-    if (token && userStr) {
-      set({ user: JSON.parse(userStr), token, isAuthenticated: true });
-    }
   },
 }));

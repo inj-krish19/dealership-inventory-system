@@ -245,3 +245,19 @@ During my vercel deployment this error came {
 ```
 
 <br />
+
+### PROMPT - 16 : VEHICLE TEST CASES
+
+```
+Okay good job, everything works well now give me updated Admin Panel and go for Vehicle Integartions, and lets wrap this up. We are now more close to the deadline.
+```
+
+<br />
+
+### PROMPT - 17 : FIXING DASHBOARD PRESISTENCY
+
+```
+Before this i got up an issue now lets resolve it. My account is showned logged in as Krish (user). On navbar my name is being showned, i am looged in now i can't open dashboard as still logged in for accessing dashboard still needs to refill the form and then it reidrects dashboard on reload have to relogin. I guess its because of not saving jwt token locally and sending request through it on login or register process so have to fix it on highest priority.
+```
+
+<br />

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { useAuthStore } from './store/authStore';
 import { useThemeStore } from './store/themeStore';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { AdminRoute } from './components/AdminRoute';
@@ -12,13 +11,11 @@ import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 
 export default function App() {
-  const hydrate = useAuthStore((s) => s.hydrate);
   const initTheme = useThemeStore((s) => s.initTheme);
 
   useEffect(() => {
-    hydrate();
     initTheme();
-  }, [hydrate, initTheme]);
+  }, [initTheme]);
 
   return (
     <BrowserRouter>

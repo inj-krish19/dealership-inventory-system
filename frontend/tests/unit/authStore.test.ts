@@ -29,20 +29,4 @@ describe('authStore', () => {
     expect(state.isAuthenticated).toBe(false);
     expect(localStorage.getItem('token')).toBeNull();
   });
-
-  it('hydrate restores session from localStorage', () => {
-    localStorage.setItem('token', 'stored-token');
-    localStorage.setItem('user', JSON.stringify(mockUser));
-
-    useAuthStore.getState().hydrate();
-    const state = useAuthStore.getState();
-
-    expect(state.isAuthenticated).toBe(true);
-    expect(state.user).toEqual(mockUser);
-  });
-
-  it('hydrate does nothing when localStorage is empty', () => {
-    useAuthStore.getState().hydrate();
-    expect(useAuthStore.getState().isAuthenticated).toBe(false);
-  });
 });
