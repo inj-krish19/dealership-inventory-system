@@ -142,7 +142,7 @@ Sample user and vehicle records for seeding a fresh database are in
 The project follows strict TDD (Red-Green-Refactor) throughout, visible in
 the commit history — failing tests are committed before their implementation.
 
-- **Backend:** 8 test files, 24 tests (Jest + Supertest) — unit tests for
+- **Backend:** 9 test files, 26 tests (Jest + Supertest) — unit tests for
   services and models, integration tests for auth, vehicles, and DB/health
 - **Frontend:** 6 test files, 19 tests (Vitest + React Testing Library) —
   store, route guards, components, and page-level flows
