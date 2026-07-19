@@ -31,6 +31,11 @@ export default function Dashboard() {
         }
     }
 
+    function handleResetFilters() {
+        setFilters({});
+        loadAll();
+    }
+
     async function handlePurchase(id: string) {
         setPurchasingId(id);
         try {
@@ -55,7 +60,7 @@ export default function Dashboard() {
                 <p className="text-text-muted text-sm mt-1">Browse available vehicles in the AutoLot catalog</p>
             </motion.div>
 
-            <SearchBar filters={filters} onChange={setFilters} onSubmit={handleSearch} />
+            <SearchBar filters={filters} onChange={setFilters} onSubmit={handleSearch} onReset={handleResetFilters} />
 
             {loading ? (
                 <p className="text-text-muted text-sm">Loading vehicles...</p>

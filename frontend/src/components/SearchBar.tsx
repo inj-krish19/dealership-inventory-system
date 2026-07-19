@@ -1,13 +1,16 @@
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiX } from 'react-icons/fi';
 import type { SearchParams } from '../services/vehicleService';
 
 interface Props {
     filters: SearchParams;
     onChange: (filters: SearchParams) => void;
     onSubmit: () => void;
+    onReset: () => void;
 }
 
-export default function SearchBar({ filters, onChange, onSubmit }: Props) {
+export default function SearchBar({ filters, onChange, onSubmit, onReset }: Props) {
+    const hasActiveFilters = Object.values(filters).some((v) => v !== undefined && v !== '');
+
     return (
         <form
             onSubmit={(e) => { e.preventDefault(); onSubmit(); }}
@@ -41,6 +44,12 @@ export default function SearchBar({ filters, onChange, onSubmit }: Props) {
             <button type="submit" className="flex items-center gap-2 bg-accent text-surface rounded-lg px-4 py-2 text-sm font-medium hover:bg-accent-hover transition-colors">
                 <FiSearch size={14} /> Search
             </button>
+            {hasActiveFilters && (
+                <button type="button" onClick={onReset}
+                    className="flex items-center gap-2 border border-border text-text-muted rounded-lg px-4 py-2 text-sm hover:text-text hover:border-accent transition-colors">
+                    <FiX size={14} /> Reset
+                </button>
+            )}
         </form>
     );
 }
