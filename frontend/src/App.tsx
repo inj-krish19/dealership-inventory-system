@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-// import AdminPanel from './pages/AdminPanel';
+import AdminPanel from './pages/AdminPanel';
 import Navbar from './components/Navbar';
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
 
           <Route element={<AdminRoute />}>
-            {/* <Route path="/admin" element={<AdminPanel />} /> */}
+            <Route path="/admin" element={<AdminPanel />} />
           </Route>
         </Route>
 
