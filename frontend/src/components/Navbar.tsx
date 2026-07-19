@@ -26,7 +26,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-4">
                 {isAuthenticated && user?.role === 'admin' && (
-                    <Link to="/admin" className="text-sm text-text-muted hover:text-text transition-colors">
+                    <Link to="/admin" className="text-sm text-accent font-bold hover:text-text transition-colors">
                         Admin Panel
                     </Link>
                 )}
