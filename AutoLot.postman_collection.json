@@ -1,0 +1,412 @@
+{
+  "info": {
+    "_postman_id": "d235e8c2-2406-47a9-b079-a308e967a182",
+    "name": "AutoLot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38145925"
+  },
+  "item": [
+    {
+      "name": "Vehicles",
+      "item": [
+        {
+          "name": "Get all vehicles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{domain}}/api/vehicles",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search Vehicle",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"make\": \"AUDI\",\r\n    \"model\": \"A6\",\r\n    \"category\": \"Wagon\",\r\n    \"price\": 80000,\r\n    \"quantity\": 9\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles/search?category=sedan&minPrice=20000&maxPrice=25000",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "make",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "model",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "category",
+                  "value": "sedan"
+                },
+                {
+                  "key": "minPrice",
+                  "value": "20000"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "25000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"make\": \"AUDI\",\r\n    \"model\": \"A6\",\r\n    \"category\": \"Wagon\",\r\n    \"price\": 80000,\r\n    \"quantity\": 9\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Vehicle",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"make\": \"AUDI\",\r\n    \"model\": \"A\",\r\n    \"category\": \"Wagon\",\r\n    \"price\": 90000,\r\n    \"quantity\": 6\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles/:id",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a5ca13b03d98a2ea38a9b45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Purchase Vehicle",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles/:id/purchase",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                ":id",
+                "purchase"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a5ca13b03d98a2ea38a9b45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Restock Vehicle - Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"quantity\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles/:id/restock",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                ":id",
+                "restock"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a5ca13b03d98a2ea38a9b45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Vehicle - Admin",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"make\": \"AUDI\",\r\n    \"model\": \"A\",\r\n    \"category\": \"Wagon\",\r\n    \"price\": 90000,\r\n    \"quantity\": 6\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{domain}}/api/vehicles/:id",
+              "host": [
+                "{{domain}}"
+              ],
+              "path": [
+                "api",
+                "vehicles",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a5ca2b6918dd8ac64c5e399"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Main Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}",
+          "host": [
+            "{{domain}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{domain}}/api",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Krish Shah\",\r\n  \"email\": \"kglivee19@gmail.com\",\r\n  \"password\": \"Pass@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/api/auth/register",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"user@gmail.com\",\r\n  \"password\": \"Pass@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/api/auth/login",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"krishshah19.in@gmail.com\", // should have admin access from database (change manually)\r\n  \"password\": \"ADM1N@5ECURE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{domain}}/api/auth/login",
+          "host": [
+            "{{domain}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "domain",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

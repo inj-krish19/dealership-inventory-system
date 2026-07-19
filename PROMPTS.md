@@ -286,8 +286,82 @@ On VehicleCard.test.ts i have not pushed as it having error of this that are 'Ve
 type VehicleCard = /*unresolved*/ any. So file is currently empty and not pushed on github. Also on each occurence of toBeInDocument and toBeDisabled it throws compilation error of Property  does not exist on type 'Assertion<HTMLElement>'
 ```
 
+<br />
+
 ### PROMPT - 21 : RESET FILTER FUNCTIONALITY
 
 ```
 Okay drop the plan of adding and updating vehicle in this. Revoke the changes i have not made any change, I just re-read the instuctions it doesn't stated about user for this ability. Admin have it will work as also we will need to change database, and much things will be added so. Just give me reset button one thing.
 ```
+
+<br />
+
+### PROMPT - 22 : PREPARE TEST REPORT & SETUP
+
+```
+I have check all the Run full test suites frontend + backend both are green. npm test ran on both all testcases passed everything is green. Pasting here below. Postman Collection and Manual API testing is done everything works fine, routes are protected and role based access is also working Just will export and push it on github. Also parallely i have deployed frontend and backend resolved CORS and deployment related issues, also made PROMPTS.md with title and prompt so its also done. Now giv eme SETUP.md file i am pasting both .env.example
+
+FRONTEND :
+VITE_BACKEND_URL=http://localhost:5000
+VITE_API_URL=http://localhost:5000/api
+
+BACKEND : PORT=5000
+DOMAIN=http://localhost
+FRONTEND_URL=http://localhost:5173
+MONGO_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/autolot?retryWrites=true&w=majority
+JWT_SECRET=replace_with_long_random_string
+JWT_EXPIRES_IN=7d
+NODE_ENV=development
+
+
+GIVE ME SETUP.md and TEST REPORTS.md
+```
+
+<br />
+
+### PROMPT - 23 : PREPARE README
+
+```
+I have check all the Run full test suites frontend + backend both are green. npm test ran on both all testcases passed everything is green. Pasting here below. Postman Collection and Manual API testing is done everything works fine, routes are protected and role based access is also working Just will export and push it on github. Also parallely i have deployed frontend and backend resolved CORS and deployment related issues, also made PROMPTS.md with title and prompt so its also done. Now giv eme SETUP.md file i am pasting both .env.example
+
+FRONTEND :
+VITE_BACKEND_URL=http://localhost:5000
+VITE_API_URL=http://localhost:5000/api
+
+BACKEND : PORT=5000
+DOMAIN=http://localhost
+FRONTEND_URL=http://localhost:5173
+MONGO_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/autolot?retryWrites=true&w=majority
+JWT_SECRET=replace_with_long_random_string
+JWT_EXPIRES_IN=7d
+NODE_ENV=development
+
+
+GIVE ME SETUP.md and TEST REPORTS.md
+```
+
+<br />
+
+### PROMPT - 24 : WRAP UP & README
+
+```Okay lets fill the heart of the project README.md, it should include these things and detailed redirection for this. First of all it should have the description of project, Tech stack for frontend and backend with mention of dependancies that are used with small statement of choosing both frameworks with typescript, My AI Usage section, where list two names ["Claude", "ChatGPT"] where Claude you know what i have used for you describe it. Mention the bug solving, resolving versioning & compatibility related and configuration of teconfig issues.
+Also it should attach the reference of SETUP, TEST_REPORT, SAMPLE_DATA, PROMPTS like markdown whenever required attach their reference. Also with that attach a new reference of SCREENSHOTS.md where all the screenshots are shown.
+One of the important things that should have honorable mention are Contact Information so list below details and live link demo urls.
+LINKS  :
+REPO: https://github.com/inj-krish19/dealership-inventory-system
+APP : [https://dealership-inventory-system.vercel.app](https://dealership-inventory-system.vercel.app/)
+API : [https://dealership-inventory-system-api.vercel.app](https://dealership-inventory-system.vercel.app/)
+
+MY DEVELOPER PERSONAL INFORMATION  FOR CONTACT PURPOSE:
+Email : kglivee19@gmail.com / krishshah19.in@gmail.com
+Github : [https://github.com/inj-krish19](https://github.com/inj-krish19/dealership-inventory-system)
+LinkedIn : https://www.linkedin.com/in/inj-krish19/
+
+Also all the things i have told you arrange them in order it shouldbe just CONTACT in the end.
+Apart from this give me a structure SCREENSHOTS.md with (for the all required screenshots). Path of ./screenshots/...
+{TITLE}
+{IMAGE LINK}
+
+```
+
+<br />
