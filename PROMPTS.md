@@ -192,3 +192,30 @@ Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.
 ```
 
 <br />
+
+### PROMPT - 12 : DEFINING THME & REPHRASING
+
+```
+Okay good till now. Ahead we have to build below things just keep in mind we have to wrap this up very shortly without compromising any feature, functionality, UI, security, integration. We have made sample login, dashboard, register like pages. What's remain.
+
+
+This is the checklist we have to proceed from now (in my mind, others i might have miss):
+- Defining theme for the application, handling light + dark mode support.
+- Redesigning pages for register, login, dashboard, admin panel (it should have premium look, landing pages can have extra ordinary animations, where other normal pages should have animations on user interactions and events like submit, redirecting, search, filter, etc...)
+- After these all have to initegrate vehicles and user api with both of the modules (user, vehicle - user is integarted, vehicle is remained)
+- Have to make postman collection for testing backend api (i'll do that parallelly - just telling)
+- Have to create a SETUP.md for anyone who can clone repo, paste .env then the sample records so their app started running without much overhead.
+- Have to create a fine README file and other MD files where README ha details about application, idea, how we made it, how to install locally, how to setup, how to run, "My AI Usage" section including for what AI is used.
+
+At frontend side now be consice for styling, animations (use framer-motion). Designs of pages, components should be responsive, theme based, working, modular and have premium + classic vibe. Theme templates for light + dark mode should be transitive. Let's go first redesign the existing page then we move forward. 
+```
+
+<br />
+
+### PROMPT - 13 : UPDATE TAILWIND CSS DEPENDANCY
+
+```
+Okay well tried, theme toggle does not works. In local storage the theme is getting changed, but its not reflected on the UI. Also some of the misconfigurations you have made. tailwind.config.js is old way, now in newer version its not needed to do. Follow version 4.3 of tailwind css. Give it a try if that works then okay, else we will move forward with double class mention where ex. className="text-slate-800 dark:text-slate-200" like a thing if aint works.  Give me new index.css with the changes.Okay well tried, theme toggle does not works. In local storage the theme is getting changed, but its not reflected on the UI. Also some of the misconfigurations you have made. tailwind.config.js is old way, now in newer version its not needed to do. Follow version 4.3 of tailwind css. Give it a try if that works then okay, else we will move forward with double class mention where ex. className="text-slate-800 dark:text-slate-200" like a thing if aint works.  Give me new index.css with the changes.
+```
+
+<br />

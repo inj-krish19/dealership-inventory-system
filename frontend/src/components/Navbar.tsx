@@ -1,5 +1,8 @@
+import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
 import { useAuthStore } from '../store/authStore';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -11,23 +14,41 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
-            <Link to="/dashboard" className="font-bold text-lg">AutoLot</Link>
+        <motion.nav
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="sticky top-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border px-6 py-4 flex justify-between items-center"
+        >
+            <Link to="/dashboard" className="font-display text-xl font-semibold tracking-tight text-text">
+                Auto<span className="text-accent">Lot</span>
+            </Link>
+
             <div className="flex items-center gap-4">
                 {isAuthenticated && user?.role === 'admin' && (
-                    <Link to="/admin" className="text-sm hover:underline">Admin Panel</Link>
+                    <Link to="/admin" className="text-sm text-text-muted hover:text-text transition-colors">
+                        Admin Panel
+                    </Link>
                 )}
+                <ThemeToggle />
                 {isAuthenticated ? (
-                    <>
-                        <span className="text-sm text-slate-300">{user?.name}</span>
-                        <button onClick={handleLogout} className="text-sm bg-slate-700 px-3 py-1.5 rounded-lg hover:bg-slate-600">
-                            Logout
-                        </button>
-                    </>
+                    <div className="flex items-center gap-3">
+                        <span className="text-sm text-text-muted hidden sm:inline">{user?.name}</span>
+                        <motion.button
+                            onClick={handleLogout}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
+                            className="flex items-center gap-1.5 text-sm bg-surface-alt border border-border px-3 py-1.5 rounded-full text-text hover:border-accent transition-colors"
+                        >
+                            <FiLogOut size={14} /> Logout
+                        </motion.button>
+                    </div>
                 ) : (
-                    <Link to="/login" className="text-sm hover:underline">Login</Link>
+                    <Link to="/login" className="text-sm text-text-muted hover:text-text transition-colors">
+                        Login
+                    </Link>
                 )}
             </div>
-        </nav>
+        </motion.nav>
     );
 }
