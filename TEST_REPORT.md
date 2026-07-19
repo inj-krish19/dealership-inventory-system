@@ -4,9 +4,9 @@
 
 | Suite             | Test Files | Tests  | Status            |
 | ----------------- | ---------- | ------ | ----------------- |
-| Backend (Jest)    | 8          | 24     | ✅ All passed     |
+| Backend (Jest)    | 9          | 26     | ✅ All passed     |
 | Frontend (Vitest) | 6          | 19     | ✅ All passed     |
-| **Total**         | **13**     | **43** | **✅ All passed** |
+| **Total**         | **15**     | **45** | **✅ All passed** |
 
 Both suites run clean with zero failures, zero skipped tests, and no dangling
 async handles. Full raw output below.
@@ -20,8 +20,8 @@ async handles. Full raw output below.
 **Command:** `npm test` (`node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand`)
 
 ```
-Test Suites: 8 passed, 8 total
-Tests:       24 passed, 24 total
+Test Suites: 9 passed, 9 total
+Tests:       26 passed, 26 total
 Snapshots:   0 total
 Time:        16.266 s
 ```
@@ -31,6 +31,7 @@ Time:        16.266 s
 | File                                | Type        | Covers                                                                                                              |
 | ----------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
 | `tests/integration/status.test.ts`  | Integration | `GET /`, `GET /health`                                                                                              |
+| `tests/integration/docs.test.ts`    | Integration | `GET /docs`, `GET /docs/json`                                                                                       |
 | `tests/integration/db.test.ts`      | Integration | MongoDB connection lifecycle                                                                                        |
 | `tests/integration/auth.test.ts`    | Integration | Register, login, duplicate email, wrong password (real HTTP + real DB)                                              |
 | `tests/unit/authService.test.ts`    | Unit        | Register/login business logic against a fake repository (no DB)                                                     |
