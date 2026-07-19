@@ -267,3 +267,5 @@ Before this i got up an issue now lets resolve it. My account is showned logged 
 ```
 Give me updated AdminPanel.tsx we still have the old classic file without theme implementation and all, give me new redesign version of it. Apart from that lets start writing the testcases for the other vehicle, user, inventory, admin related testcases lets do that one by one give me admin panel and testcases implementation of vehicle, user.
 ```
+
+<br />
