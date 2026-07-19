@@ -285,3 +285,9 @@ type VehicleCard = /*unresolved*/ any. So file is currently empty and not pushed
 On VehicleCard.test.ts i have not pushed as it having error of this that are 'VehicleCard' refers to a value, but is being used as a type here. Did you mean 'typeof VehicleCard'?ts(2749)
 type VehicleCard = /*unresolved*/ any. So file is currently empty and not pushed on github. Also on each occurence of toBeInDocument and toBeDisabled it throws compilation error of Property  does not exist on type 'Assertion<HTMLElement>'
 ```
+
+### PROMPT - 21 : RESET FILTER FUNCTIONALITY
+
+```
+Okay drop the plan of adding and updating vehicle in this. Revoke the changes i have not made any change, I just re-read the instuctions it doesn't stated about user for this ability. Admin have it will work as also we will need to change database, and much things will be added so. Just give me reset button one thing.
+```
