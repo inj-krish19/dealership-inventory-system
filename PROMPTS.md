@@ -365,3 +365,11 @@ Apart from this give me a structure SCREENSHOTS.md with (for the all required sc
 ```
 
 <br />
+
+### PROMPT - 25 : BACKEND IN API DOCUMENTATION
+
+```
+Give me a commit for above on README one commit. After that create a backend routepn "/docs" just like swagger things list all the endpoints and their description, method like thing. Also give me a commit message for it also.
+```
+
+<br />
