@@ -6,6 +6,9 @@ import { useThemeStore } from './store/themeStore';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Navbar from './components/Navbar';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import Dashboard from './pages/Dashboard';
+import { AdminRoute } from './components/AdminRoute';
 
 
 export default function App() {
@@ -25,6 +28,13 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+
+          <Route element={<AdminRoute />}>
+            {/* <Route path="/admin" element={<AdminPanel />} /> */}
+          </Route>
+        </Route>
 
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />

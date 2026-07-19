@@ -219,3 +219,11 @@ Okay well tried, theme toggle does not works. In local storage the theme is gett
 ```
 
 <br />
+
+### PROMPT - 14 : REDESIGN PAGES
+
+```
+Okay this one works. I can see your login page, how insane it looks appreciate your efforts. Lets now create Register, Dashboard and AdminPanel. I have a doubt how you have planned to manage showing Admin login page. From home page or navbar how will anyone will redirect from landing page or navbar to admin panel, and all of that. Just clear are you making different page or how you manage just create it and notify me. Then on next we will create pages for vehicle related and integarte them.
+```
+
+<br />
