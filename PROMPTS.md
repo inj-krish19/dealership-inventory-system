@@ -235,3 +235,13 @@ Now currenly give me an .md file consisting sample data of the application and b
 ```
 
 <br />
+
+### PROMPT - 15 : RESOLVING DEPLOYMENT
+
+```
+During my vercel deployment this error came {
+    "message": "Operation `users.findOne()` buffering timed out after 10000ms"
+} 10 second it tooks to respond and still this, local works fine.
+```
+
+<br />
