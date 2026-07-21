@@ -54,4 +54,36 @@ describe('VehicleService', () => {
   it('throws when purchasing a non-existent vehicle', async () => {
     await expect(service.purchase('999', 1)).rejects.toThrow('Vehicle not found');
   });
+
+  it('throws when purchasing at or after 10 PM', async () => {
+    const lateNight = new Date('2026-07-21T22:00:00');
+    await expect(service.purchase('1', 1, lateNight)).rejects.toThrow(
+      'Purchases are not allowed after 10 PM'
+    );
+  });
+
+  it('throws when purchasing well after 10 PM', async () => {
+    const lateNight = new Date('2026-07-21T23:45:00');
+    await expect(service.purchase('1', 1, lateNight)).rejects.toThrow(
+      'Purchases are not allowed after 10 PM'
+    );
+  });
+
+  it('allows purchase just before 10 PM', async () => {
+    const beforeCutoff = new Date('2026-07-21T21:59:00');
+    const updated = await service.purchase('1', 1, beforeCutoff);
+    expect(updated.quantity).toBe(2);
+  });
+
+  it('allows purchase during normal daytime hours', async () => {
+    const daytime = new Date('2026-07-21T14:30:00');
+    const updated = await service.purchase('1', 1, daytime);
+    expect(updated.quantity).toBe(2);
+  });
+
+  it('allows purchase again after midnight (next day)', async () => {
+    const afterMidnight = new Date('2026-07-22T00:15:00');
+    const updated = await service.purchase('1', 1, afterMidnight);
+    expect(updated.quantity).toBe(2);
+  });
 });

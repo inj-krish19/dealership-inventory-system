@@ -27,7 +27,15 @@ export class VehicleService {
     if (!deleted) throw new Error('Vehicle not found');
   }
 
-  async purchase(id: string, quantity: number): Promise<IVehicle> {
+  async purchase(id: string, quantity: number, currentTime: Date = new Date()): Promise<IVehicle> {
+    const PURCHASE_CUTOFF_HOUR = 11; // 11 AM, 24-hour format
+    if (
+      currentTime.getHours() >= PURCHASE_CUTOFF_HOUR || 
+      currentTime.getHours() >= PURCHASE_CUTOFF_HOUR - 1 && currentTime.getMinutes() >= 30
+    ) {
+      throw new Error('Purchases are not allowed after 10:30 AM');
+    }
+
     const vehicle = await this.vehicleRepository.findById(id);
     if (!vehicle) throw new Error('Vehicle not found');
     if (vehicle.quantity < quantity) throw new Error('Insufficient stock');
